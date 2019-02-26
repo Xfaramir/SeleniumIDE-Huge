@@ -1,0 +1,65 @@
+{
+  "id": "54e10fc1-f9d3-4b58-883e-c048b515aed4",
+  "version": "2.0",
+  "name": "Huge Automation",
+  "url": "https://www.google.com",
+  "tests": [{
+    "id": "d256b33c-01d7-4b20-934d-f2084b22c329",
+    "name": "GoogleLoad",
+    "commands": [{
+      "id": "eeb3e2c0-3ded-4578-8aca-f1fa109b7bbe",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3ca06f0f-a43e-4048-931a-96e9c49cfd4b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "2560x1417",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c8794fb6-6387-415f-ab50-4b73ab6003fa",
+      "comment": "",
+      "command": "type",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.gLFyf", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//form[@id='tsf']/div[2]/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": "lmao"
+    }, {
+      "id": "c6e66280-33f5-4e96-8491-10c9933966e3",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.gLFyf", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//form[@id='tsf']/div[2]/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }]
+  }],
+  "suites": [{
+    "id": "40f91146-ed1c-49ea-82fc-426d14a12a52",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["d256b33c-01d7-4b20-934d-f2084b22c329"]
+  }],
+  "urls": ["https://www.google.com/"],
+  "plugins": [{
+    "id": "fbnkflkahhlmhdgkddaafgnnokifobik",
+    "name": "Applitools",
+    "version": "1.0.0"
+  }]
+}
